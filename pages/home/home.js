@@ -5,7 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    names:"haha",
+    txt:"双大括号语法,允许声明式将数据渲染进DOM系统",
+    msg:"wuhan",
+    flag:true,
+    imgSrc: "https://zuozhaoxi.com/base/img/3.jpg",
+    array: [{
+      message: 'foo-1909',
+    }, {
+      message: 'bar-1910'
+    }],
+  },
+  
+  changeflag(){
+    this.setData({
+      flag:!this.data.flag
+    })
   },
 
   /**
@@ -61,6 +76,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+   
+    return {
+      title: '自定义转发标题',
+      path: '/page/user?id=123'
+    }
   }
 })

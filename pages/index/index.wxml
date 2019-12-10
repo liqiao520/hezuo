@@ -10,4 +10,14 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+  <view>
+  <text bindtap="countAdd">{{msg}}--{{count}}</text>
+  </view>
+  <view>
+    <text bindtap="changeMsg">{{msg}}</text>
+
+  </view>
+  <view>
+    <button type="primary" size="{{primarySize}}" bindtap="gotohome"> 进入小程序 </button>
+  </view>
 </view>

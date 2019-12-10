@@ -1,15 +1,37 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+console.log(app)
 Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    count:1909,
+    msg:'hahah',
+    flag:!!0
   },
-  //事件处理函数
+
+  gotohome(){
+    // wx.navigateTo({
+    //   url: '/pages/home/home?id=123',
+    // })
+    wx.switchTab({
+      url: '/pages/home/home?id=123',
+    })
+  },
+  countAdd(){
+    this.setData({
+      count:++this.data.count
+    })
+  },
+  changeMsg(){
+    this.setData({
+      msg:"你好啊"
+    })
+  },
+    //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'

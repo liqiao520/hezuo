@@ -1,2 +1,28 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view>
+    <text>pages/home/home.wxml</text>
+    <text>---{{names}}</text>
+
+    <view>
+     <text>{{txt}}</text>
+    </view>
+
+    <view>
+     <text>{{msg}}</text>
+    </view>
+
+    <view>
+     {{flag?'要么活':'要么死'}}
+    </view>
+    <view wx:if="{{flag}}">
+      <image src="{{imgSrc}}" class="pic"/>
+
+    </view>
+    <view>
+     <switch checked="{{flag}}" bindchange="changeflag"></switch>
+    </view>
+
+    <view wx:for="{{array}}" wx:key="index">
+      {{index}}: {{item.message}}
+    </view>
+</view>

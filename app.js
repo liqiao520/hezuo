@@ -34,6 +34,10 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    mobile:5534546
+  },
+  onPageNotFound(res){
+    //404
   }
 })
